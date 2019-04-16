@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uE2-fs-loW" customClass="PPDatePickerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaZ-TI-hGF">
+                    <rect key="frame" x="0.0" y="413" width="375" height="254"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-wk-oE9">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
+                            <items>
+                                <barButtonItem width="8" style="plain" systemItem="fixedSpace" id="54G-aP-gjL"/>
+                                <barButtonItem systemItem="cancel" id="34p-Fy-5wr">
+                                    <connections>
+                                        <action selector="cancelTap:" destination="uE2-fs-loW" id="L7H-sn-Aci"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="jaB-lr-f7s"/>
+                                <barButtonItem systemItem="done" id="pQC-Vb-gG4">
+                                    <connections>
+                                        <action selector="doneTap:" destination="uE2-fs-loW" id="IEd-Jk-o53"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem width="8" style="plain" systemItem="fixedSpace" id="LGN-7w-vBv"/>
+                            </items>
+                        </toolbar>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-dV-1V3">
+                            <rect key="frame" x="0.0" y="38" width="375" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="552825541.09066498">
+                                <!--2018-07-09 10:39:01 +0000-->
+                            </date>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="-31579200">
+                                <!--2000-01-01 12:00:00 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OMS-dV-1V3" secondAttribute="trailing" id="34P-FD-p2l"/>
+                        <constraint firstAttribute="height" constant="254" id="IP0-96-Uk3"/>
+                        <constraint firstAttribute="trailing" secondItem="jbj-wk-oE9" secondAttribute="trailing" id="LSQ-MZ-ASZ"/>
+                        <constraint firstItem="OMS-dV-1V3" firstAttribute="top" secondItem="jbj-wk-oE9" secondAttribute="bottom" id="NYt-5E-gTh"/>
+                        <constraint firstAttribute="bottom" secondItem="OMS-dV-1V3" secondAttribute="bottom" id="PU3-Hf-wTq"/>
+                        <constraint firstItem="OMS-dV-1V3" firstAttribute="leading" secondItem="gaZ-TI-hGF" secondAttribute="leading" id="ZSr-AQ-Vta"/>
+                        <constraint firstItem="jbj-wk-oE9" firstAttribute="leading" secondItem="gaZ-TI-hGF" secondAttribute="leading" id="gS5-w5-xko"/>
+                        <constraint firstItem="jbj-wk-oE9" firstAttribute="top" secondItem="gaZ-TI-hGF" secondAttribute="top" id="tsD-z8-1gN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RlF-jB-wLv" firstAttribute="bottom" secondItem="gaZ-TI-hGF" secondAttribute="bottom" id="5xy-tJ-Lvq"/>
+                <constraint firstItem="gaZ-TI-hGF" firstAttribute="leading" secondItem="RlF-jB-wLv" secondAttribute="leading" id="QpM-pN-dqA"/>
+                <constraint firstItem="gaZ-TI-hGF" firstAttribute="trailing" secondItem="RlF-jB-wLv" secondAttribute="trailing" id="pIr-Xr-cLI"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="RlF-jB-wLv"/>
+            <connections>
+                <outlet property="datePicker" destination="OMS-dV-1V3" id="FxN-Xv-FcW"/>
+                <outlet property="toolBar" destination="jbj-wk-oE9" id="ND4-BY-b4R"/>
+                <outlet property="toolbarAndDateView" destination="gaZ-TI-hGF" id="hOA-rZ-Auh"/>
+            </connections>
+            <point key="canvasLocation" x="-34.5" y="167.5"/>
+        </view>
+    </objects>
+</document>
